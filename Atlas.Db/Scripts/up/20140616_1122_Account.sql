@@ -1,0 +1,1 @@
+alter table accounts add statement_type nvarchar(50) not null default ''

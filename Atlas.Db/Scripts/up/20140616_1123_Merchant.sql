@@ -1,0 +1,1 @@
+alter table merchants add state_province nvarchar(255) not null default ''

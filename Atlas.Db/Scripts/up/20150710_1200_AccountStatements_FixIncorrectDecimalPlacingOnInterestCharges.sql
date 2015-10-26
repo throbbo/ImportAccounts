@@ -1,0 +1,1 @@
+update account_statements set interest_charges = interest_charges / 100

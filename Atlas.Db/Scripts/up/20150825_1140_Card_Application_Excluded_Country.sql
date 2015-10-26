@@ -1,0 +1,3 @@
+CREATE TABLE card_application_excluded_countries(
+	country_iso_number int NOT NULL constraint pk_card_application_excluded_countries_country_iso_number primary key constraint fk_countries_country_iso_number references countries(country_iso_number)
+)

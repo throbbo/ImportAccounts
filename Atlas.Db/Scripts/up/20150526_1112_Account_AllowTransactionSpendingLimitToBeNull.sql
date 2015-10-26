@@ -1,0 +1,1 @@
+alter table accounts alter column transaction_spending_limit decimal(18,4) null

@@ -1,0 +1,1 @@
+update user_widgets set widget_id = 'merchantcategorygroupspend' where widget_id = 'merchantcategoryspend'

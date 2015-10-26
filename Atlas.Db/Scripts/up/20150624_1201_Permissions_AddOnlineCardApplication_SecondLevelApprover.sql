@@ -1,0 +1,1 @@
+insert into permissions(permission) values ('OnlineCardApplication_SecondLevelApprover')

@@ -1,0 +1,1 @@
+update account_requests set account_request_type = 'LimitAmendment' where account_request_type = 'LimitChange'

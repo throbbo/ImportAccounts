@@ -1,0 +1,1 @@
+alter table transactions add customer_pos_ref nvarchar(20) null, evidence_for_tax bit null;

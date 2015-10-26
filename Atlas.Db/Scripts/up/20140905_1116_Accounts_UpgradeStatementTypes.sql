@@ -1,0 +1,1 @@
+update accounts 	set statement_type = 'Undefined' 	where statement_type = ''

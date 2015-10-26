@@ -1,0 +1,1 @@
+sp_RENAME 'scheduled_reports.[download_template_type]' , 'search_type', 'COLUMN'

@@ -1,0 +1,1 @@
+update users set admin_role_id = 1 where system_role = 2 and admin_role_id is null

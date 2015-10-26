@@ -1,0 +1,1 @@
+alter table account_balances add open_to_buy numeric(16,4) null

@@ -1,0 +1,1 @@
+alter table scheduled_reports drop constraint ux__scheduled_reports

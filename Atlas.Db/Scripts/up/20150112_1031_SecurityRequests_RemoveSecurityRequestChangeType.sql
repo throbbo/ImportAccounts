@@ -1,0 +1,1 @@
+alter table security_requests drop column security_request_change_type

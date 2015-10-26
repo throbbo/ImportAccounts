@@ -1,0 +1,1 @@
+alter table accounts add date_lost_or_stolen date null;

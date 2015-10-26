@@ -1,0 +1,1 @@
+alter table accounts add approver_user_id int null CONSTRAINT fk_accounts_approver_user_id REFERENCES users(user_id)

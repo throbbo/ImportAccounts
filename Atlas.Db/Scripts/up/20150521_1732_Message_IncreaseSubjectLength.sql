@@ -1,0 +1,1 @@
+alter table messages alter column subject nvarchar(100) not null

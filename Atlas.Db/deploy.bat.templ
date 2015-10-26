@@ -1,0 +1,12 @@
+@echo off 
+
+SET server="#{DbServer}"
+SET database="#{DbName}"
+SET user="#{DbUser}"
+SET password="#{DbPassword}"
+
+REM =======================================
+REM The following line must not be modified
+CALL exec.bat %1 execnow
+REM =======================================
+EXIT /b %errorlevel%

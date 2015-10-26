@@ -1,0 +1,1 @@
+alter table import_files add company_file_date date null

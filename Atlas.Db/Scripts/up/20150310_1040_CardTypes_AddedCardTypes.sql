@@ -1,0 +1,8 @@
+insert into card_types(card_scheme_id, card_type_id, name) values (2, 1, 'Corporate')
+insert into card_types(card_scheme_id, card_type_id, name) values (2, 2, 'Purchasing')
+insert into card_types(card_scheme_id, card_type_id, name) values (2, 3, 'Business Credit')
+insert into card_types(card_scheme_id, card_type_id, name) values (2, 4, 'Commercial')
+insert into card_types(card_scheme_id, card_type_id, name) values (2, 5, 'Fleet')
+insert into card_types(card_scheme_id, card_type_id, name) values (2, 6, 'Distribution')
+insert into card_types(card_scheme_id, card_type_id, name) values (2, 7, 'Business Debit')
+insert into card_types(card_scheme_id, card_type_id, name) values (2, 9, 'Multiple Card Types')

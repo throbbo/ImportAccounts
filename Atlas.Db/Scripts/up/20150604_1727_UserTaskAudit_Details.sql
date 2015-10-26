@@ -1,0 +1,1 @@
+alter table user_task_audits add details nvarchar(max) null
