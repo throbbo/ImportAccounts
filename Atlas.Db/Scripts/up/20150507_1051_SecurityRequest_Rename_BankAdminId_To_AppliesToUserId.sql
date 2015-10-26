@@ -1,1 +1,0 @@
-sp_rename 'security_requests.bank_admin_id', 'applies_to_user_id', 'COLUMN'

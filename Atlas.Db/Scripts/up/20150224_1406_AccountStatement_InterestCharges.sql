@@ -1,1 +1,0 @@
-alter table account_statements add interest_charges decimal(18,4) null

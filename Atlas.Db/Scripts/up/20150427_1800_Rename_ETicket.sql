@@ -1,1 +1,0 @@
-EXEC sp_rename 'transaction_passengers.eticket', 'e_ticket', 'COLUMN'

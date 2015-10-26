@@ -1,4 +1,4 @@
-Db Readme
+Atlas Db Readme
 ===============
 
 1. Run restore.bat

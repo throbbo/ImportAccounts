@@ -1,2 +1,0 @@
-alter table account_statements add billing_currency_iso_number int null
-alter table account_statements add CONSTRAINT fk__account_statements__billing_currency_code FOREIGN KEY (billing_currency_iso_number) REFERENCES currencies(currency_iso_number)

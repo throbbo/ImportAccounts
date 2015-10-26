@@ -1,0 +1,66 @@
+﻿@using System.Activities.Statements
+@using Accounts.Core
+@model Accounts.Core.TransactionsAllReport
+@{
+    ViewBag.Title = "Transaction Report";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Transaction Details List.</h2>
+</hgroup>
+
+<fieldset>
+    <legend>Transaction Report</legend>
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Name)
+                @Html.DisplayFor(m => m.Name)
+            </td>
+            <td>
+                @Html.Label("Financial Year")
+                @Html.DisplayFor(m => m.FinancialYear)
+            </td>
+            <td>
+                @Html.Label("Date From")
+                @Html.DisplayFor(m => m.DateFrom)
+            </td>
+            <td>
+                @Html.Label("Date To")
+                @Html.DisplayFor(m => m.DateTo)
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>@Html.Label("Bank Account")</td>
+            <td>@Html.Label("Date")</td>
+            <td>@Html.Label("Quarter")</td>
+            <td>@Html.Label("Description")</td>
+            <td>@Html.Label("Amount")</td>
+            <td>@Html.Label("Opening Balance", new { @style = "text-align:right" })</td>
+            <td>@Html.Label("Balance", new { @style = "text-align:right" })</td>
+        </tr>
+
+        
+        @foreach (var transaction in Model.TransactionReportItems.OrderBy(x => x.BankAccount).ThenBy(y => y.TransactionDate).ThenBy(z => z.TransactionId))
+        {
+            <tr>
+                <td>@transaction.BankAccount</td>
+                <td>@transaction.TransactionDateStr</td>
+                <td>@transaction.Quarter</td>
+                <td>@transaction.Category</td>
+                <td>@transaction.Amount</td>
+                <td>@transaction.OpeningBalanceDisplay</td>
+                <td>@transaction.BalanceAfter</td>
+            </tr>
+        }
+
+    </table>
+    <input type="Button" value="Close" />
+</fieldset>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

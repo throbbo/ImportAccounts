@@ -1,1 +1,0 @@
-insert into permissions(permission) values ('Users_CreateAmend')

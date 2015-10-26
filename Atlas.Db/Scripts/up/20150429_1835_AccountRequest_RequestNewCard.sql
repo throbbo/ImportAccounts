@@ -1,1 +1,0 @@
-alter table account_request_account_changes add request_new_card bit null;

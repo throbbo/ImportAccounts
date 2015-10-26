@@ -1,1 +1,0 @@
-alter table card_schemes alter column file_extension nvarchar(10) null

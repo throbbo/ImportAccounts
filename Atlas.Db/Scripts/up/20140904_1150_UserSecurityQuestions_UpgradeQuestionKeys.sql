@@ -1,1 +1,0 @@
-update user_security_questions 	set question_key = 'T.Registration.' + question_key 	where question_key like 'SecurityQuestions:%'

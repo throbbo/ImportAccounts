@@ -1,0 +1,68 @@
+﻿@using System.Activities.Statements
+@using Accounts.Core
+@model Accounts.Core.TransactionReport
+@{
+    ViewBag.Title = "Transaction Report";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Transaction Details List.</h2>
+</hgroup>
+
+<fieldset>
+    <legend>Transaction Report</legend>
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Name)
+                @Html.DisplayFor(m => m.Name)
+            </td>
+            <td>
+                @Html.Label("Date From")
+                @Html.DisplayFor(m => m.DateFrom)
+            </td>
+            <td>
+                @Html.Label("Date To")
+                @Html.DisplayFor(m => m.DateTo)
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>@Html.Label("Bank Account")</td>
+            <td>@Html.Label("Date")</td>
+            <td>@Html.Label("Description")</td>
+            <td>@Html.Label("Amount")</td>
+            <td>@Html.Label("Balance")</td>
+        </tr>
+
+        @foreach (var quarter in Model.Quarters)
+        {
+            <tr>
+                <td>@quarter.Quarter.FinancialYear</td>
+                <td>Quarter: @quarter.Quarter.QuarterNo</td>
+                <td>@quarter.Quarter.StartDate.ToString("yyyy-MM-dd") to @quarter.Quarter.EndDate.ToString("yyyy-MM-dd")</td>
+                <td></td>
+                <td><bold>@quarter.Balance.ToString("C")</bold></td>
+            </tr>
+            
+            foreach (var transaction in quarter.TransactionReportItems)
+            {
+                <tr>
+                    <td>@transaction.Account</td>
+                    <td>@transaction.DateStr</td>
+                    <td>@transaction.Line</td>
+                    <td>@transaction.Amount</td>
+                    <td>@transaction.BalanceAfter</td>
+                </tr>
+            }        
+        }
+
+    </table>
+    <input type="Button" value="Close" />
+</fieldset>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,1 +1,0 @@
-alter table accounts add temporary_credit_limit_until date null

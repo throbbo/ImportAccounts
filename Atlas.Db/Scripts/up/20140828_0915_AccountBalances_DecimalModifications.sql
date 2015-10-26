@@ -1,1 +1,0 @@
-alter table account_balances alter column balance decimal(18,4) not null;

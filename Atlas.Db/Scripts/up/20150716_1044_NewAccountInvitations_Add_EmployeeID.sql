@@ -1,1 +1,0 @@
-alter table new_account_invitations add employee_id nvarchar(255) null;

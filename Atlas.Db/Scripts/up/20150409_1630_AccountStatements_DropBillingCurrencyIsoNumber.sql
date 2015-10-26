@@ -1,2 +1,0 @@
-alter table account_statements drop CONSTRAINT fk__account_statements__billing_currency_code
-alter table account_statements drop column billing_currency_iso_number 
